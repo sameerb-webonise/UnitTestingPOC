@@ -15,7 +15,7 @@ public class FormFillingActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Fragment newFragment = new FormFillingFragment();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.fragmentContainer, newFragment).commit();
+            fragmentTransaction.add(R.id.fragmentContainer, newFragment, "FormFillingActivity").commit();
         }
     }
 }
