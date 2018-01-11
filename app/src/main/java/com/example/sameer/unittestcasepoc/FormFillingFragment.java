@@ -43,12 +43,7 @@ public class FormFillingFragment extends Fragment implements View.OnClickListene
     public void validateData(String one, String two, String three, String four) {
         if (TextUtils.isEmpty(one) || TextUtils.isEmpty(two) ||
                 TextUtils.isEmpty(three) || TextUtils.isEmpty(four)) {
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(getActivity(), "Please enter valid/complete data", Toast.LENGTH_SHORT).show();
-                }
-            });
+            getActivity().runOnUiThread(() -> Toast.makeText(getActivity(), "Please enter valid/complete data", Toast.LENGTH_SHORT).show());
         }
     }
 }

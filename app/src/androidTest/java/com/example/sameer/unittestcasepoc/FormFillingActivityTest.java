@@ -17,9 +17,9 @@ public class FormFillingActivityTest extends ActivityInstrumentationTestCase2<Fo
         super(FormFillingActivity.class);
     }
 
-    public FormFillingActivityTest(String pkg, Class<FormFillingActivity> formFillingActivityClass) {
+    /*public FormFillingActivityTest(String pkg, Class<FormFillingActivity> formFillingActivityClass) {
         super(pkg, formFillingActivityClass);
-    }
+    }*/
 
     public void setUp() throws Exception {
         solo = new Solo(getInstrumentation(), getActivity());
@@ -45,7 +45,7 @@ public class FormFillingActivityTest extends ActivityInstrumentationTestCase2<Fo
         formFillingFragment.validateData("dasd","asd","sadas","sdf");
     }
 
-    public void testWithValisData() throws Exception {
+    public void testWithValidData() throws Exception {
         solo.enterText(((EditText) solo.getView(R.id.etFirstName)), "abc");
         solo.enterText(((EditText) solo.getView(R.id.etMiddleName)), "def");
         solo.enterText(((EditText) solo.getView(R.id.etLastName)), "ghi");
